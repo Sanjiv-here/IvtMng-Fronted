@@ -40,7 +40,7 @@ const data={ orgName,
   
   return(
   <>
-      <div class="bg-sky-600 p-8 max-w-md mx-auto rounded  mb-8">
+      <div class="bg-sky-400 p-8 max-w-md mx-auto rounded  mb-8">
       <h1 class="text-2xl tracking-normal pb-4 text-white">Create an Organisation Account</h1>
         <div class="flex flex-col items-start">
           <Input detail="Organisation Name" id="orgname" placeholder="" typ="text" value={orgName} onChange={(e) => setOrgName(e.target.value)}/>
@@ -51,7 +51,7 @@ const data={ orgName,
           <Input detail="Confirm Password" id="orgconpass" placeholder="" typ="password" value={orgConfirmPassword} onChange={(e) => setOrgConfirmPassword(e.target.value)}/>
         </div>
       </div>
-      <div class="bg-sky-600 p-8 max-w-md mx-auto rounded">
+      <div class="bg-sky-400 p-8 max-w-md mx-auto rounded">
       <h1 class="text-2xl tracking-normal pb-4 text-white">Create an Admin Account</h1>
         <div class="flex flex-col items-start">
           <Input detail="Username" id="adname" placeholder="" typ="text" value={adminUsername} onChange={(e) => setAdminUsername(e.target.value)}/>
