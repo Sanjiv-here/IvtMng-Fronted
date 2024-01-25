@@ -20,12 +20,14 @@ function Form({ onSubmit }){
   const [adminCryptoAddress, setAdminCryptoAddress] = useState('');
   const [adminContact, setAdminContact] = useState('');
 
-const data={ orgName,
+const data1={ orgName,
     orgAddress,
     orgContact,
     orgEmail,
     orgPassword,
-    orgConfirmPassword,
+    orgConfirmPassword};
+
+const data2={
     adminUsername,
     adminEmail,
     adminPassword,
@@ -34,10 +36,6 @@ const data={ orgName,
     adminCryptoAddress,
     adminContact};
 
-  const handleSubmit = () => {
-    onSubmit(data);
-  };
-  
   return(
   <>
       <div class="bg-sky-400 p-8 max-w-md mx-auto rounded  mb-8">
@@ -60,8 +58,8 @@ const data={ orgName,
           <Input detail="Confirm Password" id="adconpass" placeholder="" typ="password" value={adminConfirmPassword} onChange={(e) => setAdminConfirmPassword(e.target.value)}/>
           <Input detail="Designation" id="addesignation" placeholder="" typ="text" value={adminDesignation} onChange={(e) => setAdminDesignation(e.target.value)}/>
           <Input detail="Crypto Wallet Address" id="adcryadd" placeholder="" typ="text" value={adminCryptoAddress} onChange={(e) => setAdminCryptoAddress(e.target.value)}/>
-          <Input detail="Contact No." id="adcontact" placeholder="" typ="tel" value={adminContact} onChange={(e) => setAdminContact(e.target.value)}/>
-          <SubmitButton label="Sign Up" onClick={handleSubmit} data={data} />
+          <Input detail="Mobile Number" id="adcontact" placeholder="" typ="tel" value={adminContact} onChange={(e) => setAdminContact(e.target.value)}/>
+          <SubmitButton label="Sign Up" data1={data1} data2={data2} />
         </div>
       </div>
     </>
