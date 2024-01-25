@@ -10,10 +10,10 @@ function SubmitButton(props) {
           if (response && response.status === 200) {
             console.log('Organization data submitted successfully');
           } else {
-            console.error('Error submitting organization data');
+            console.error('Error123 submitting organization data');
           }
         } catch (error) {
-          console.error('Error:', error);
+          console.error('Error123:', error);
         }
      };
 

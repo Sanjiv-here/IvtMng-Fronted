@@ -20,25 +20,7 @@ function Form({ onSubmit }){
   const [adminCryptoAddress, setAdminCryptoAddress] = useState('');
   const [adminContact, setAdminContact] = useState('');
 
-
-  const handleSubmit = () => {
-    onSubmit({
-      orgName,
-      orgAddress,
-      orgContact,
-      orgEmail,
-      orgPassword,
-      orgConfirmPassword,
-      adminUsername,
-      adminEmail,
-      adminPassword,
-      adminConfirmPassword,
-      adminDesignation,
-      adminCryptoAddress,
-      adminContact,
-    });
-  };
-  const data={ orgName,
+const data={ orgName,
     orgAddress,
     orgContact,
     orgEmail,
@@ -51,6 +33,11 @@ function Form({ onSubmit }){
     adminDesignation,
     adminCryptoAddress,
     adminContact};
+
+  const handleSubmit = () => {
+    onSubmit(data);
+  };
+  
   return(
   <>
       <div class="bg-sky-600 p-8 max-w-md mx-auto rounded  mb-8">
