@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Input from './Input';
-import SubmitButton from './SubmitButton';
+import Input from './InputOrgAdminReg';
+import SubmitButton from './SubmitButtonOrgAdminReg';
 
-function Form({ onSubmit }){
+function FormOrgAdminReg({ onSubmit }){
 
   const [orgName, setOrgName] = useState('');
   const [orgAddress, setOrgAddress] = useState('');
@@ -18,6 +18,7 @@ function Form({ onSubmit }){
   const [adminConfirmPassword, setAdminConfirmPassword] = useState('');
   const [adminDesignation, setAdminDesignation] = useState('');
   const [adminCryptoAddress, setAdminCryptoAddress] = useState('');
+  const [adminContractAddress, setAdminContractAddress] = useState('');
   const [adminContact, setAdminContact] = useState('');
 
 const data1={ orgName,
@@ -34,6 +35,7 @@ const data2={
     adminConfirmPassword,
     adminDesignation,
     adminCryptoAddress,
+    adminContractAddress,
     adminContact};
 
   return(
@@ -58,6 +60,7 @@ const data2={
           <Input detail="Confirm Password" id="adconpass" placeholder="" typ="password" value={adminConfirmPassword} onChange={(e) => setAdminConfirmPassword(e.target.value)}/>
           <Input detail="Designation" id="addesignation" placeholder="" typ="text" value={adminDesignation} onChange={(e) => setAdminDesignation(e.target.value)}/>
           <Input detail="Crypto Wallet Address" id="adcryadd" placeholder="" typ="text" value={adminCryptoAddress} onChange={(e) => setAdminCryptoAddress(e.target.value)}/>
+          <Input detail="Contract Address" id="adcontadd" placeholder="" typ="text" value={adminContractAddress} onChange={(e) => setAdminContractAddress(e.target.value)}/>
           <Input detail="Mobile Number" id="adcontact" placeholder="" typ="tel" value={adminContact} onChange={(e) => setAdminContact(e.target.value)}/>
           <SubmitButton label="Sign Up" data1={data1} data2={data2} />
         </div>
@@ -67,4 +70,4 @@ const data2={
 
 }
 
-export default Form;
+export default FormOrgAdminReg;

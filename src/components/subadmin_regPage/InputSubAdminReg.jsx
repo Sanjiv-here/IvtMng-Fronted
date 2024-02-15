@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Input(props) {
+function InputSubAdminReg(props) {
 
   return (
     <div className="w-full p-2">
@@ -20,4 +20,4 @@ function Input(props) {
   );
 }
 
-export default Input;
+export default InputSubAdminReg;

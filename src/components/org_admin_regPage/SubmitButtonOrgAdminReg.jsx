@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-function SubmitButton(props) {
+function SubmitButtonOrgAdminReg(props) {
 
     const handleSubmit = async (data1,data2,e) => {
         try {
@@ -35,4 +35,4 @@ function SubmitButton(props) {
   );
 }
 
-export default SubmitButton;
+export default SubmitButtonOrgAdminReg;
